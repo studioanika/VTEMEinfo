@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Главная" />
+        <item
+            android:id="@+id/nav_sale"
+            android:icon="@drawable/ic_sale"
+            android:title="Акции, скидки" />
+        <item
+            android:id="@+id/nav_film"
+            android:icon="@drawable/ic_cast_connected"
+            android:title="Анонс" />
+        <item
+            android:id="@+id/nav_catalog"
+            android:icon="@drawable/ic_import_contacts_black_24dp"
+            android:title="Каталог" />
+
+        <item
+            android:id="@+id/nav_cash"
+            android:icon="@drawable/ic_cash_multiple"
+            android:title="Конвертер" />
+
+        <item
+
+            android:id="@+id/nav_phones"
+            android:icon="@drawable/ic_contact_phone_black_24dp"
+            android:title="Телефонный справочник"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_dev"
+            android:icon="@drawable/ic_headset"
+            android:title="Обратная связь" />
+
+
+    </group>
+
+   <group android:id="@+id/gr1">
+       <item
+           android:id="@+id/nav_apps"
+           android:icon="@drawable/ic_youtube_creator_studio"
+           android:title="Другие приложения"
+           android:visible="false" />
+   </group>
+
+</menu>
