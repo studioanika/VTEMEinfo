@@ -46,7 +46,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity.startListCompany();
+                activity.startListCompany(list.get(position).getId(),
+                        list.get(position).getName());
             }
         });
     }

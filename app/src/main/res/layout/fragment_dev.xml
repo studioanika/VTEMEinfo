@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/dev.send"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
@@ -32,7 +32,7 @@
         android:padding="16dp">
 
         <EditText
-            android:id="@+id/et_name"
+            android:id="@+id/dev.et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -40,7 +40,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/et_email"
+            android:id="@+id/dev.et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,7 +48,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/et_subject"
+            android:id="@+id/dev.et_subject"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:ems="10"

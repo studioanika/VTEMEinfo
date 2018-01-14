@@ -1,10 +1,12 @@
 package com.example.root.mpolispager.model;
 
+import java.io.Serializable;
+
 /**
  * Created by root on 9.1.18.
  */
-
-public class Company {
+@SuppressWarnings("serial")
+public class Company implements Serializable{
 
     String banner;
     String cat_img;

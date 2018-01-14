@@ -46,7 +46,7 @@ public class InfoShopsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Utils.darkenStatusBar(this, R.color.colorPrimaryDark);
+        Utils.darkenStatusBar(this, R.color.status_bar);
         try {
             setContentView(R.layout.activity_info_shops);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -55,9 +55,9 @@ public class InfoShopsActivity extends AppCompatActivity {
 
             getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
-            upArrow.setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            getSupportActionBar().setHomeAsUpIndicator(upArrow);
+//            final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
+//            upArrow.setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+//            getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
             progressBar = (ProgressBar) findViewById(R.id.progressBarInfoShops);
             listView = (ListView) findViewById(R.id.listViewInfoShops);
@@ -119,5 +119,17 @@ public class InfoShopsActivity extends AppCompatActivity {
                 });
         snackbar.setDuration(8000); // 8 секунд
         snackbar.show();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                // do what you want to be done on home button click event
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

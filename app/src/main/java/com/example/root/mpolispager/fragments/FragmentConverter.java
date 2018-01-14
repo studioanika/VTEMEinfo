@@ -378,7 +378,10 @@ public class FragmentConverter extends Fragment {
 
                     if(value.getCurID() == 290){
                         UAH = value.getCurOfficialRate();
-                        tvUAH.setText("UAH "+String.valueOf(UAH));
+                        double xxU = UAH/100;
+                        String formatUAH = String.format("%.2f", xxU);
+                        formatUAH = formatUAH.replace(",",".");
+                        tvUAH.setText("UAH "+String.valueOf(formatUAH));
                     }else if(value.getCurID() == 145){
                         USD = value.getCurOfficialRate();
                         tvUSD.setText("USD "+String.valueOf(USD));
@@ -387,7 +390,10 @@ public class FragmentConverter extends Fragment {
                         tvEUR.setText("EUR "+String.valueOf(EUR));
                     }else if(value.getCurID() == 298){
                         RUB = value.getCurOfficialRate();
-                        tvRUB.setText("RUB "+String.valueOf(RUB));
+                        double xxR =  RUB/100;
+                        String formatUAH = String.format("%.2f", xxR);
+                        formatUAH = formatUAH.replace(",",".");
+                        tvRUB.setText("RUB "+String.valueOf(formatUAH));
                     }
                     Log.e("valuta_"+value.getCurName(),"="+value.getCurOfficialRate());
 

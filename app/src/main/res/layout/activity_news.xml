@@ -15,8 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleTextColor="@color/colorAccent" />
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 
 
@@ -60,13 +59,15 @@
                     android:id="@+id/news_act.date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Декабрь 21, 2017" />
+                    android:text="Декабрь 21, 2017"
+                    android:textColor="@color/colorPrimaryDark" />
 
                 <TextView
                     android:id="@+id/news_act.desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:lineSpacingMultiplier="1.2"
                     android:text="TextView" />
             </LinearLayout>
 

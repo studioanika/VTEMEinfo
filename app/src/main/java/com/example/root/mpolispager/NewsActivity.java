@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -37,7 +38,7 @@ public class NewsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Utils.darkenStatusBar(this, R.color.colorPrimaryDark);
+        Utils.darkenStatusBar(this, R.color.status_bar);
         try {
             setContentView(R.layout.activity_news);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -46,9 +47,9 @@ public class NewsActivity extends AppCompatActivity {
 
             getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
-            upArrow.setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            getSupportActionBar().setHomeAsUpIndicator(upArrow);
+//            final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
+//            upArrow.setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+//            getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
             progress = (RelativeLayout) findViewById(R.id.news_act_progress);
             tv_Date = (TextView) findViewById(R.id.news_act_date);
@@ -100,6 +101,18 @@ public class NewsActivity extends AppCompatActivity {
                 });
         snackbar.setDuration(8000); // 8 секунд
         snackbar.show();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                // do what you want to be done on home button click event
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

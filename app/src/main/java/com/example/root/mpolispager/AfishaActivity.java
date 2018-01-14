@@ -10,6 +10,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -42,7 +43,7 @@ public class AfishaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Utils.darkenStatusBar(this, R.color.colorPrimaryDark);
+        Utils.darkenStatusBar(this, R.color.status_bar);
         setContentView(R.layout.activity_afisha_info);
         collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.main_collapsing);
@@ -101,5 +102,17 @@ public class AfishaActivity extends AppCompatActivity {
                 });
         snackbar.setDuration(8000); // 8 секунд
         snackbar.show();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                // do what you want to be done on home button click event
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

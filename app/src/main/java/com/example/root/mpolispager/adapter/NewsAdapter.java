@@ -1,16 +1,12 @@
 package com.example.root.mpolispager.adapter;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -20,18 +16,9 @@ import com.bumptech.glide.Glide;
 import com.dinuscxj.ellipsize.EllipsizeTextView;
 import com.example.root.mpolispager.MainActivity;
 import com.example.root.mpolispager.R;
-import com.example.root.mpolispager.fragments.FragmentAfisha;
-import com.example.root.mpolispager.model.Category;
 import com.example.root.mpolispager.model.News;
-import com.example.root.mpolispager.model.Shop;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**

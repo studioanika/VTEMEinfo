@@ -56,41 +56,57 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/afisha.title"
-                    android:layout_width="match_parent"
+                    android:id="@+id/info_company.email"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:text="Njп 5 самых ожидаемых фильмов"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="НАПИСАТЬ"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp"
-                    android:visibility="gone" />
+                    android:visibility="visible" />
 
                 <TextView
-                    android:id="@+id/afisha.date"
-                    android:layout_width="match_parent"
+                    android:id="@+id/info_company.phone"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="Декабрь 21, 2017"
-                    android:textColor="@color/colorPrimaryDark" />
-
-                <TextView
-                    android:id="@+id/afisha.desc"
-                    android:lineSpacingMultiplier="1.2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="TextView" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="ПОЗВОНИТЬ"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="16dp"
+                android:background="@color/line_separator"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/info_company.ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/info_company.descr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:visibility="gone" />
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
     <RelativeLayout
-        android:id="@+id/afisha.progress"
+        android:id="@+id/info_company.progress"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/cardview_light_background"

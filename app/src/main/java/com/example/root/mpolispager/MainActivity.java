@@ -1,5 +1,8 @@
 package com.example.root.mpolispager;
 
+/**
+ * Created by root on 11.1.18.
+ */
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -197,35 +200,10 @@ public class MainActivity extends AppCompatActivity
 
         View v = navigationView.getHeaderView(0);
         ImageView header_img = v.findViewById(R.id.header_img);
-        Glide.with(header_img.getContext()).load(R.drawable.info_2).into(header_img);
+        Glide.with(header_img.getContext()).load(R.drawable.info_3).into(header_img);
         RelativeLayout rel_select_city = (RelativeLayout) v.findViewById(R.id.rel_select_city);
 
-//        final List<City> cityes = new ArrayList<>();
-//        db.collection("megapolis").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                for(DocumentSnapshot doc : task.getResult()){
-//                    City e = new City();
-//                    e.setId(doc.getString("id"));
-//                    e.setName(doc.getString("name"));
-//                    e.setTitle(doc.getString("img"));
-//                    Log.e("i",e.getName());
 //
-//                    cityes.add(e);
-//                }
-//
-//
-//            }
-//        });
-//
-//        rel_select_city.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showAlert(cityes);
-//            }
-//        });
-
-
     }
 
     private void showAlert(List<City> cityes){
@@ -296,7 +274,10 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    public void startListCompany(){
-        startActivity(new Intent(MainActivity.this, ListCompanyActivity.class));
+    public void startListCompany(String id, String title){
+        Intent intent = new Intent(MainActivity.this, ListCompanyActivity.class);
+        intent.putExtra("id", id);
+        intent.putExtra("title", title);
+        startActivity(intent);
     }
 }

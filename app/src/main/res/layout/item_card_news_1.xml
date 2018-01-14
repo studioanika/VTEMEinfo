@@ -138,4 +138,10 @@
             android:visibility="gone" />
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="bottom|right"
+        app:srcCompat="@drawable/arrow_right" />
 </android.support.v7.widget.CardView>

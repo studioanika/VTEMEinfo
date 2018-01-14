@@ -84,7 +84,7 @@ public class FragmentCategory extends Fragment {
             }
         });
 
-        getCompany();
+        //getCompany();
 
     }
 
