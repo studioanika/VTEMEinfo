@@ -9,6 +9,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -44,6 +45,8 @@ import com.example.root.mpolispager.fragments.FragmentListActions;
 import com.example.root.mpolispager.model.Category;
 import com.example.root.mpolispager.model.City;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -51,7 +54,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.nio.Buffer;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -71,6 +76,7 @@ public class MainActivity extends AppCompatActivity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     CategoryAdapter adapter;
     NavigationView navigationView;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +108,47 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         getCity();
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Map<String, Object> city = new HashMap<>();
+                city.put("banner", "https://firebasestorage.googleapis.com/v0/b/megapolis-e943e.appspot.com/o/company%2Fip_moroz%2Fip_moroz_banner.jpg?alt=media&token=a763f2cd-5304-41a1-b97c-cbeeb4f80152");
+                city.put("cat_img", "");
+                city.put("cat_name", "Строительство и ремонт");
+                city.put("city", "Пинск");
+                city.put("description", "Ремонт и реставрация мягкой мебели. Изменение формы, замена пружин, поролона, ремонт матрацев. Возможна комплектация новыми креслами или диваном. Из кровати-тахту, из дивана-угловой. Низкие цены. Пенсионерам скидки. Рассрочка." );
+                city.put("email", "");
+                city.put("icon", "https://firebasestorage.googleapis.com/v0/b/megapolis-e943e.appspot.com/o/company%2Fclub_vteme%2Fvteme_club_icon.jpg?alt=media&token=0d8838d9-71cb-49ce-b0c6-6a941ad14f3e");
+                city.put("id", "1");
+                city.put("ip", "ИП Мороз В.П.");
+                city.put("maps", "52.1131237,26.1027956");
+                city.put("phone", "+375299745770");
+                city.put("time", "");
+                city.put("title", "Ремонт и реставрация мягкой мебели");
+                city.put("unp", "200677307");
+
+                db.collection("/megapolis/pinsk/category/11/1").document("1")
+                        .set(city)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully written!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error writing document", e);
+                            }
+                        });
+
+            }
+        });
+
+
     }
 
     @Override

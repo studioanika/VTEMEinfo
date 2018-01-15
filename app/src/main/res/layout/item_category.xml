@@ -28,7 +28,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="16dp" />
+                android:layout_marginLeft="16dp"
+                android:alpha="0.54" />
         </android.support.v7.widget.CardView>
 
         <TextView

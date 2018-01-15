@@ -109,13 +109,13 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@+id/textView6"
+            android:layout_toEndOf="@+id/textView6963"
             android:ems="10"
             android:inputType="numberDecimal"
             android:text="0" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView6963"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -145,13 +145,13 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@+id/textView6"
+            android:layout_toEndOf="@+id/textView665"
             android:ems="10"
             android:inputType="numberDecimal"
             android:text="0" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView665"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -181,13 +181,13 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@+id/textView6"
+            android:layout_toEndOf="@+id/textView6669"
             android:ems="10"
             android:inputType="numberDecimal"
             android:text="0" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView6669"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -217,13 +217,13 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@+id/textView6"
+            android:layout_toEndOf="@+id/textView678"
             android:ems="10"
             android:inputType="numberDecimal"
             android:text="0" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView678"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -257,7 +257,8 @@
         android:id="@+id/converter.progress"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/back_nav_lv">
+        android:background="@color/back_nav_lv"
+        android:visibility="gone">
 
         <ProgressBar
             android:id="@+id/progressBar4"
